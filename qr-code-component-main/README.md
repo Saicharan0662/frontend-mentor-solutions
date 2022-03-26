@@ -20,7 +20,7 @@ This challenge is an newbie challenge in Frontend Mentor. It is a simple QR code
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/Saicharan0662/frontend-mentor-solutions/qr-code-component-main)
+- Solution URL: [Solution URL](https://github.com/Saicharan0662/frontend-mentor-solutions/tree/master/qr-code-component-main)
 - Live Site URL: [Live site](https://peppy-griffin-0238e6.netlify.app/)
 
 ## My process
