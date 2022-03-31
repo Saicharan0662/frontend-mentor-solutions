@@ -19,6 +19,7 @@ const Card = () => {
                 </div>
             </div>
             <div className="slider-container">
+                <label htmlFor="slider"></label>
                 <input type="range" name="slider" id="slider" className='slider'
                     min={8} max={125} value={price} onChange={(e) => setPrice(e.target.value)} />
             </div>
