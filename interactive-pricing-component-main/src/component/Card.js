@@ -1,24 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 import iconCheck from '../images/icon-check.svg'
 
 const Card = () => {
+    const [isChecked, setIsChecked] = useState(false)
+    const [price, setPrice] = useState(16.00)
+
     return (
         <div className='pricing-card'>
             <div className="card-header">
                 <div className="header-text">
                     <span className='pg-text'>100K PAGEVIEWS</span>
                     <span>
-                        <span className='price'>$16.00</span>
-                        <span className='plan-text'>/ month</span>
+                        <span className='price'>
+                            ${isChecked ? Math.round((price - price * 0.25) * 100) / 100 : price}
+                        </span>
+                        <span className='plan-text'>/ {isChecked ? "year" : "month"}</span>
                     </span>
                 </div>
             </div>
-            <div className="slider">
-                <input type="range" name="slider" id="slider" />
+            <div className="slider-container">
+                <input type="range" name="slider" id="slider" className='slider'
+                    min={8} max={125} value={price} onChange={(e) => setPrice(e.target.value)} />
             </div>
             <div className="toggler-section">
                 <span className='small-gray-text'>Monthly Billing</span>
-                <span><input type="checkbox" name="toggler" id="toggler" /></span>
+                <span>
+                    <label htmlFor="toggler" className="switch">
+                        <input type="checkbox" name="toggler" id="toggler"
+                            checked={isChecked} onChange={() => setIsChecked(!isChecked)} />
+                        <span className="toggler"></span>
+                    </label>
+                </span>
                 <span className='small-gray-text'>Yearly Billing</span>
                 <span className='discount-text'>25% discount</span>
             </div>

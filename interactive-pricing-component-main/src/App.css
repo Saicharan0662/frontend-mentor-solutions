@@ -69,14 +69,14 @@
     font-weight: 800;
 }
 
-.slider{
+.slider-container{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 24px 0;
 }
-.slider input{
+.slider-container input{
     width: 97%;
 }
 
@@ -84,6 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 20px;
 }
 .small-gray-text{
     color: hsl(225, 20%, 60%);
@@ -135,4 +136,81 @@
     color: hsl(0, 0%, 100%);
     font-size: 12px;
     border-radius: 50px;
+}
+
+/* toggler */
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 33px;
+    height: 17px;
+    background-color: hsl(223, 50%, 87%);
+    border-radius: 50px;
+}
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.toggler{
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    content: "";
+    background-color: hsl(223, 50%, 87%);
+    border-radius: 50px;
+    transition: all .4s ease;
+}
+.toggler:before{
+    position: absolute;
+    cursor: pointer;
+    top: 2px;
+    left: 1px;
+    content: "";
+    height: 13px;
+    width: 13px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 100%;
+    transition: all .4s ease;
+}
+.toggler:hover{
+    background-color: hsl(174, 77%, 80%);
+}
+input:checked + .toggler{
+    background-color: hsl(174, 86%, 45%);
+}
+input:checked + .toggler:before{
+    transform: translateX(16px);
+}
+
+/* Slider */
+.slider {
+  -webkit-appearance: none;
+  width: 85%;
+  height: 10px;
+  border-radius: 5px;
+  background: hsl(224, 65%, 95%);;
+  outline: none;
+  /* overflow: hidden; */
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  border: none;
+  background: url('./images/icon-slider.svg');
+  background-color: hsl(174, 86%, 45%);;
+  background-repeat: no-repeat;
+  background-position: 50%, 50%;
+  cursor: pointer;
+  box-shadow: 0 15px 15px 2px hsl(174, 77%, 80%);;
+  transition: 0.4s;
+}
+.slider::-webkit-slider-thumb:hover {
+  background-color: hsl(174, 77%, 80%);
 }
