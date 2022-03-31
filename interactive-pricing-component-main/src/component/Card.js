@@ -10,7 +10,7 @@ const Card = () => {
             <div className="card-header">
                 <div className="header-text">
                     <span className='pg-text'>100K PAGEVIEWS</span>
-                    <span>
+                    <span className='price-box'>
                         <span className='price'>
                             ${isChecked ? Math.round((price - price * 0.25) * 100) / 100 : price}
                         </span>

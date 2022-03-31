@@ -214,3 +214,26 @@ input:checked + .toggler:before{
 .slider::-webkit-slider-thumb:hover {
   background-color: hsl(174, 77%, 80%);
 }
+
+@media screen and (max-width: 460px) {
+    .pricing-card{
+        width: 90%;
+    }
+    .card-footer{
+        flex-direction: column;
+        row-gap: 20px;
+        text-align: center;
+    }
+    .border{
+        width: 140%;
+        left: -14%;
+    }
+    .header-text{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+        position: relative;
+    }
+
+}
