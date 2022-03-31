@@ -16,7 +16,7 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
 This challenge is an Junior level challenge in Frontend Mentor. It is an interactive pricing component on monthy and yearly plans. The styling is with pure CSS no librabries or frameworks.
 
 ### Screenshot
-![screenshot](./screenshot/screenshot.jpg)
+![screenshot](./src/screenshots/screenshot.jpg)
 
 ### Links
 
