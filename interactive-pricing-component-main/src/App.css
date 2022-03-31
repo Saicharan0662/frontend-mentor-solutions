@@ -216,6 +216,9 @@ input:checked + .toggler:before{
   background-color: hsl(174, 77%, 80%);
 }
 
+.text::before{
+    content: "25% discount";
+}
 @media screen and (max-width: 460px) {
     .pricing-card{
         width: 90%;
@@ -236,5 +239,11 @@ input:checked + .toggler:before{
         row-gap: 20px;
         position: relative;
     }
-
+    .text::before{
+        content: "-25%";
+    }
+    .discount-text{
+        border-radius: 21px;
+        padding: 2px 5px;
+    }
 }

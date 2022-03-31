@@ -32,7 +32,7 @@ const Card = () => {
                     </label>
                 </span>
                 <span className='small-gray-text'>Yearly Billing</span>
-                <span className='discount-text'>25% discount</span>
+                <span className='discount-text text'></span>
             </div>
             <span className="border"></span>
             <div className="card-footer">
