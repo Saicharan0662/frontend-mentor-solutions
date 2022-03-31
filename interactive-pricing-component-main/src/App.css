@@ -43,6 +43,7 @@
     padding: 35px;
     width: 420px;
     position: relative;
+    box-shadow: 0px 15px 15px 0px hsl(224, 65%, 95%);;
 }
 .header-text{
     display: flex;
